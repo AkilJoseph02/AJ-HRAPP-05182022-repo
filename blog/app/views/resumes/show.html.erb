@@ -31,10 +31,22 @@
 </p>
 
 <h2>Skills</h2>
-
+<%= render @resume.skills %>
  
 <h2>Add a skill:</h2>
 <%= render 'skills/form' %>
+
+<h2>Languages</h2>
+<%= render @resume.languages %>
+ 
+<h2>Add a language:</h2>
+<%= render 'languages/form' %>
+
+<h2>Experiences</h2>
+<%= render @resume.experiences %>
+ 
+<h2>Add an experience/work:</h2>
+<%= render 'experiences/form' %>
 
 <%= link_to 'Edit', edit_resume_path(@resume) %> |
 <%= link_to 'Back', resumes_path %>

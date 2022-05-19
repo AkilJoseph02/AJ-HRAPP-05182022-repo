@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20220518232748) do
+ActiveRecord::Schema.define(version: 20220519150805) do
+
+  create_table "experiences", force: :cascade do |t|
+    t.string   "title"
+    t.string   "time"
+    t.string   "description"
+    t.integer  "resume_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["resume_id"], name: "index_experiences_on_resume_id"
+  end
+
+  create_table "languages", force: :cascade do |t|
+    t.string   "title"
+    t.string   "level"
+    t.integer  "resume_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["resume_id"], name: "index_languages_on_resume_id"
+  end
 
   create_table "resumes", force: :cascade do |t|
     t.string   "name"
