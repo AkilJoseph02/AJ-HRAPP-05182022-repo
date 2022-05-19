@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @resume.name %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @resume.image_url %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @resume.role %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @resume.location %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @resume.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @resume.phone %>
+</p>
+
+<h2>Skills</h2>
+
+ 
+<h2>Add a skill:</h2>
+<%= render 'skills/form' %>
+
+<%= link_to 'Edit', edit_resume_path(@resume) %> |
+<%= link_to 'Back', resumes_path %>
