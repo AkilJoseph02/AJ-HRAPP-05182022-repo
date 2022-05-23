@@ -48,5 +48,11 @@
 <h2>Add an experience/work:</h2>
 <%= render 'experiences/form' %>
 
+<h2>Educations</h2>
+<%= render @resume.educations %>
+ 
+<h2>Add completed levels of education:</h2>
+<%= render 'educations/form' %>
+
 <%= link_to 'Edit', edit_resume_path(@resume) %> |
 <%= link_to 'Back', resumes_path %>
